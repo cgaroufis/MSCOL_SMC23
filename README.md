@@ -1,6 +1,6 @@
 # Multi-Source Contrastive Learning from Musical Audio
 
-This repository contains the code for reproducing the results and experiments of the paper "Multi-Source Contrastive Learning from Musical Audio", submitted to the 2023 Sound and Music Computing Conference (SMC-2023).
+This repository contains the code for reproducing the results and experiments of the paper "Multi-Source Contrastive Learning from Musical Audio", submitted to the 2023 Sound and Music Computing Conference (SMC-2023). We also provide pre-trained models for either finetuning, or direct training of shallow classifiers for downstream tasks.
 
 Links for datasets:
 - MTAT: https://mirg.city.ac.uk/codeapps/the-magnatagatune-dataset
