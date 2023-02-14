@@ -15,7 +15,7 @@ Open-Unmix was used for acquiring the various source excerpts: https://github.co
 
 Dependencies for the training/evaluation of the contrastive framework and the downstream classifiers:
 
-numpy
+numpy  
 tensorflow (2.4.0)
 
 Dependencies for the training and the extraction of the musical sources
