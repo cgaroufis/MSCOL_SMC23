@@ -7,9 +7,9 @@ The code used borrows heavily from the COLA repository: https://github.com/googl
 Open-Unmix was used for acquiring the various source excerpts: https://github.com/sigsep/open-unmix-pytorch
 
 Links for datasets:
-- MTAT:
-- NSynth:
-- FMA: 
+- MTAT: https://mirg.city.ac.uk/codeapps/the-magnatagatune-dataset
+- NSynth: https://magenta.tensorflow.org/datasets/nsynth
+- FMA (*small* subset): https://github.com/mdeff/fma 
 
 Dependencies:
 
