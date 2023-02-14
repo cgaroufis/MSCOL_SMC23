@@ -13,12 +13,13 @@ The default train/validation/test splits were used for NSynth and FMA; for MTAT,
 
 Open-Unmix was used for acquiring the various source excerpts: https://github.com/sigsep/open-unmix-pytorch
 
-Dependencies:
+Dependencies for the training of the contrastive framework and the downstream classifiers:
 
 numpy
-
 tensorflow (2.4.0)
+
+Dependencies for the training and the extraction of the musical sources
 
 umx-gpu
 
-To reproduce the experiments with degraded/randomly assigned sources, the dependencies of open-unmix are required. 
+Important! The open-unmix model operates at a sampling frequency of 44.1 kHz and accepts .wav files. Bash scripts are provided for the upsampling of the audio excerpts and the downsampling of the separated sources before further preprocessing.
