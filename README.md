@@ -15,9 +15,12 @@ Open-Unmix was used for acquiring the various source excerpts: https://github.co
 
 Dependencies for the preprocessing of the source/downstream datasets and the training/evaluation of the contrastive framework and the downstream classifiers:
 
-numpy  
-scipy  
-tensorflow (2.4.0)
+librosa (0.8.1)  
+numpy (1.21.6)  
+pandas (1.4.4)  
+scipy (1.9.1)  
+scikit-learn (1.1.1)  
+tensorflow-gpu (2.4.1)
 
 To run the uploaded interactive notebook on the results on auto-tagging, you further need:
 
