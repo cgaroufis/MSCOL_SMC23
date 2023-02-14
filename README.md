@@ -16,10 +16,18 @@ Open-Unmix was used for acquiring the various source excerpts: https://github.co
 Dependencies for the training/evaluation of the contrastive framework and the downstream classifiers:
 
 numpy  
+scipy  
 tensorflow (2.4.0)
+
+To run the uploaded interactive notebook on the results on auto-tagging, you further need:
+
+jupyter-notebook  
+matplotlib
 
 Dependencies for the training and the extraction of the musical sources
 
 umx-gpu
 
 Important! The open-unmix model operates at a sampling frequency of 44.1 kHz and accepts .wav files. Bash scripts are provided for the upsampling of the audio excerpts and the downsampling of the separated sources before further preprocessing.
+
+## Work in progress! Uploading of the code, the pre-trained models and the supplementary interactive material will be completed within the next few days. Stay tuned! :)
