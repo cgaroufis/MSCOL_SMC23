@@ -13,7 +13,7 @@ The default train/validation/test splits were used for NSynth and FMA; for MTAT,
 
 Open-Unmix was used for acquiring the various source excerpts: https://github.com/sigsep/open-unmix-pytorch
 
-Dependencies for the training of the contrastive framework and the downstream classifiers:
+Dependencies for the training/evaluation of the contrastive framework and the downstream classifiers:
 
 numpy
 tensorflow (2.4.0)
