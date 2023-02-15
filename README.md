@@ -33,4 +33,4 @@ umx-gpu
 
 Important! The open-unmix model operates at a sampling frequency of 44.1 kHz and accepts .wav files. Bash scripts are provided for the upsampling of the audio excerpts and the downsampling of the separated sources before further preprocessing.
 
-## Work in progress! Uploading of the code, the pre-trained models and the supplementary interactive material will be completed within the next few days. Stay tuned! :)
+- Work in progress! Uploading of the code, the pre-trained models and the supplementary interactive material will be completed within the next few days. Stay tuned! :)
