@@ -13,7 +13,7 @@ The default train/validation/test splits were used for NSynth and FMA; for MTAT,
 
 Open-Unmix was used for acquiring the various source excerpts: https://github.com/sigsep/open-unmix-pytorch
 
-Dependencies for the preprocessing of the source/downstream datasets and the training/evaluation of the contrastive framework and the downstream classifiers (alternatively, you can set up a complete conda environment using the uploaded mscol.yml file):
+Python dependencies for the preprocessing of the source/downstream datasets and the training/evaluation of the contrastive framework and the downstream classifiers (alternatively, you can set up a complete conda environment using the uploaded mscol.yml file):
 
 librosa (0.8.1)  
 numpy (1.21.6)  
@@ -22,5 +22,22 @@ scipy (1.9.1)
 scikit-learn (1.1.1)  
 tensorflow-gpu (2.4.1)
 
-Important! The open-unmix model operates at a sampling frequency of 44.1 kHz and accepts .wav files. Bash scripts are provided for the upsampling of the audio excerpts and the downsampling of the separated sources before further preprocessing.
+## Data Preprocessing
 
+To get mel-spectrograms from raw audio files, you can simply use the preprocess_{dataset}.py files. The preprocess_multitracks.py computes the mel-spectorgrams from the available source excerpts.
+
+Since open-unmix was used for acquiring the various source excerpts, it is advised to install the open-unmix package via pip (ffmpeg is also required). Open-unmix operates at a sampling frequency of 44.1 kHz, accepting as input .wav files. To make your dataset compatible with openunmix:
+
+- (optionally) run get_wavs.sh to transform the dataset into .wav files
+- run get_stems.sh to resample each wav file, and acquire stems corresponding to the bass, the drums, the vocals and the melodic accompaniment of each song excerpt
+- run downsample_wavs.sh to downsample each wav file to 16000 kHz, to enable further preprocessing.
+
+## Model Pretraining
+
+To pre-train an encoder, run the pretraining.py script:
+
+python3 pretraining.py datapath model dir ... 
+
+## Shallow Classifier Training
+
+To train a shallow classifier on top of a pre-trained encoder at a specific downstream task, ...
