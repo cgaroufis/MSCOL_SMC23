@@ -13,7 +13,7 @@ The default train/validation/test splits were used for NSynth and FMA; for MTAT,
 
 Open-Unmix was used for acquiring the various source excerpts: https://github.com/sigsep/open-unmix-pytorch
 
-Dependencies for the preprocessing of the source/downstream datasets and the training/evaluation of the contrastive framework and the downstream classifiers:
+Dependencies for the preprocessing of the source/downstream datasets and the training/evaluation of the contrastive framework and the downstream classifiers (alternatively, you can set up a complete conda environment using the uploaded mscol.yml file):
 
 librosa (0.8.1)  
 numpy (1.21.6)  
@@ -22,15 +22,5 @@ scipy (1.9.1)
 scikit-learn (1.1.1)  
 tensorflow-gpu (2.4.1)
 
-To run the uploaded interactive notebook on the results on auto-tagging, you further need:
-
-jupyter-notebook  
-matplotlib
-
-Dependencies for the training and the extraction of the musical sources
-
-umx-gpu
-
 Important! The open-unmix model operates at a sampling frequency of 44.1 kHz and accepts .wav files. Bash scripts are provided for the upsampling of the audio excerpts and the downsampling of the separated sources before further preprocessing.
 
-- Work in progress! Uploading of the code, the pre-trained models and the supplementary interactive material will be completed within the next few days. Stay tuned! :)
