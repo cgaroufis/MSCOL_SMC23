@@ -11,9 +11,9 @@ The code used borrows heavily from the <a href="https://github.com/google-resear
 
 The default train/validation/test splits were used for NSynth and FMA; for MTAT, we followed the data cleaning and split used <a href="https://github.com/jongpillee/music_dataset_split/tree/master/MTAT_split">there</a>.
 
-<a href="https://github.com/sigsep/open-unmix-pytorch">Open-Unmix</a> was used for acquiring the various source excerpts: 
+<a href="https://github.com/sigsep/open-unmix-pytorch">Open-Unmix</a> was used for acquiring the various source excerpts.
 
-Python dependencies for the preprocessing of the source/downstream datasets and the training/evaluation of the contrastive framework and the downstream classifiers (alternatively, you can set up a complete conda environment using the uploaded mscol.yml file):
+Python dependencies for the preprocessing of the source/downstream datasets and the training/evaluation of the contrastive framework and the downstream classifiers (alternatively, you can set up a complete conda environment using the uploaded mscol.yml file).
 
 librosa (0.8.1)  
 numpy (1.21.6)  
@@ -42,7 +42,7 @@ eg. python3 pretraining.py /home/data/MTT models/mymodel --silent --sources bass
 datapath: path of the pretraining dataset, both complete source excerpts and the respective sources  
 model_dir: path where checkpoints of the pretrained model will be saved (at intervals of 1000 steps)  
 --silent: whether silent source segments will be included or not in the pretraining process  
--- mask: re-implements the data-driven pipeline for contrastive pair creation devised here.  
+-- mask: re-implements the data-driven pipeline for contrastive pair creation devised <a href="https://arxiv.org/pdf/2202.10139.pdf">here</a>.  
 -- sources: provides a list of sources which will be used for the task of musical source association. Applicable sources include bass, drums, vocals and the rest of the melodic accompaniment (other). Provide one source to train a source-targeted models, or all four to train the full model.
 
 ## Shallow Classifier Training
