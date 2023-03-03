@@ -1,17 +1,17 @@
 # Multi-Source Contrastive Learning from Musical Audio
 
-This repository contains the code for reproducing the results and experiments of the paper "Multi-Source Contrastive Learning from Musical Audio", submitted to the 2023 Sound and Music Computing Conference (SMC-2023). We also provide pre-trained models for either finetuning, or direct training of shallow classifiers for downstream tasks.
+This repository contains the code for reproducing the results and experiments of the paper <a href="https://arxiv.org/pdf/2302.07077.pdf">"Multi-Source Contrastive Learning from Musical Audio"</a>, submitted to the 2023 Sound and Music Computing Conference (SMC-2023). We also provide pre-trained models for either finetuning, or direct training of shallow classifiers for downstream tasks.
 
 Links for datasets:
 - MTAT: https://mirg.city.ac.uk/codeapps/the-magnatagatune-dataset
 - NSynth: https://magenta.tensorflow.org/datasets/nsynth
 - FMA (*small* subset): https://github.com/mdeff/fma 
 
-The code used borrows heavily from the COLA repository: https://github.com/google-research/google-research/tree/master/cola
+The code used borrows heavily from the <a href="https://github.com/google-research/google-research/tree/master/cola">COLA</a> repository. 
 
-The default train/validation/test splits were used for NSynth and FMA; for MTAT, we followed the data cleaning and split used in https://github.com/jongpillee/music_dataset_split/tree/master/MTAT_split
+The default train/validation/test splits were used for NSynth and FMA; for MTAT, we followed the data cleaning and split used <a href="https://github.com/jongpillee/music_dataset_split/tree/master/MTAT_split">there</a>.
 
-Open-Unmix was used for acquiring the various source excerpts: https://github.com/sigsep/open-unmix-pytorch
+<a href="https://github.com/sigsep/open-unmix-pytorch">Open-Unmix</a> was used for acquiring the various source excerpts: 
 
 Python dependencies for the preprocessing of the source/downstream datasets and the training/evaluation of the contrastive framework and the downstream classifiers (alternatively, you can set up a complete conda environment using the uploaded mscol.yml file):
 
