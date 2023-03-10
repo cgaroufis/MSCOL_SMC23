@@ -361,7 +361,7 @@ for i in range(stepinit, stepinit+steps):
     print('validation contrastive task accuracy at step', i, ' ', evals[1])        
       
   if (i%1000 == 999):
-    save_path = checkpoint.save('./'+sys.argv[1]+'checkpoint')
+    save_path = checkpoint.save('./'+model_dir+'checkpoint')
 
   if (i == 4999):
     K.set_value(contrastive_network.optimizer.lr, 0.5*K.get_value(contrastive_network.optimizer.lr))

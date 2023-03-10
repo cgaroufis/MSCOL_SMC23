@@ -26,8 +26,8 @@ def prepare_standard_example(x, is_training):
     return x
 
 parser = argparse.ArgumentParser()
-parser.add_argument('model_dir',type=str)
 parser.add_argument('mtat_path',type=str)
+parser.add_argument('model_dir',type=str)
 parser.add_argument('--train',default=False,action='store_true')
 args = parser.parse_args()
 mtat_path = args.mtat_path

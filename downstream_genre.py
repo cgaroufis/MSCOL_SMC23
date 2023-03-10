@@ -37,8 +37,8 @@ def prepare_standard_example(x, is_training):
 
 parser = argparse.ArgumentParser()
 
-parser.add_argument('model_dir',type=str)
 parser.add_argument('fma_path',type=str)
+parser.add_argument('model_dir',type=str)
 parser.add_argument('--train',default=False,action='store_true')
 args = parser.parse_args()
 fma_path = args.fma_path

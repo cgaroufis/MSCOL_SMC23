@@ -47,8 +47,8 @@ def prepare_standard_example(x, is_training):
 
 
 parser = argparse.ArgumentParser()
-parser.add_argument('model_dir',type=str)
 parser.add_argument('nsynth_path',type=str)
+parser.add_argument('model_dir',type=str)
 parser.add_argument('--train',default=False,action='store_true')
 args = parser.parse_args()
 nsynth_path = args.nsynth_path
