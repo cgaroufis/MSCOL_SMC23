@@ -1,8 +1,8 @@
 # Script for downstream classification of music genres using the "small" subset of FMA
-# Usage: python3 downstream_genre.py path-to-pretrained-model path-to-dataset --train 
+# Usage: python3 downstream_genre.py path-to-dataset path-to-pretrained-model --train 
 # if included, --train argument trains a shallow classifier upon the frozen encoder
 # if not, it evaluates the respective shallow classifier
-# eg. python3 downstream_genre.py models/vocals/ /home/data/FMA --train
+# eg. python3 downstream_genre.py /home/data/FMA models/vocals/  --train
 
 import os
 import argparse
