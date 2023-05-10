@@ -133,7 +133,7 @@ contrastive_network.compile(
           loss=tf.keras.losses.SparseCategoricalCrossentropy(from_logits=True),
           metrics=[tf.keras.metrics.SparseCategoricalAccuracy()])
 
-contrastive_network.load_weights(tf.train.latest_checkpoint(sys.argv[1])).expect_partial()
+contrastive_network.load_weights(tf.train.latest_checkpoint(model_dir)).expect_partial()
 encoder = contrastive_network.embedding_model.get_layer("encoder")
 
 inputs = tf.keras.layers.Input(shape=(98, 64))
@@ -201,7 +201,7 @@ if train:
     if evals[1] > best_val_acc:
       best_val_acc = evals[1]
       patience = 0
-      save_path = checkpoint.save('./'+sys.argv[1][:-1]+'_MTAT/'+'checkpoint')
+      save_path = checkpoint.save('./'+model_dir[:-1]+'_MTAT/'+'checkpoint')
     else:
       patience += 1
       if patience > 4:
@@ -210,7 +210,7 @@ if train:
         print('Performance of the downstream model in the validation set', "{:.5f}".format(best_val_acc))
         break
     
-model.load_weights(tf.train.latest_checkpoint(sys.argv[1][:-1]+'_MTAT/')).expect_partial()
+model.load_weights(tf.train.latest_checkpoint(model_dir[:-1]+'_MTAT/')).expect_partial()
 evals_ = np.zeros((test_numel,50))
 for kk in range(0,test_numel,361):
   specs = np.empty((29*361,98,64,1))

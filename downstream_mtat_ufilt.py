@@ -35,8 +35,6 @@ mtat_path = args.mtat_path
 model_dir = args.model_dir
 train = args.train
 
-train = parser.add_argument('--train',default=False,action='store_true')
-
 train_path = mtat_path+'/melspecs/train'
 valid_path = mtat_path+'/melspecs/valid'
 test_path = mtat_path+'/melspecs/test'
