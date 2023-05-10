@@ -1,5 +1,5 @@
 # Script that trains and evaluates a shallow classifier on top of a frozen pretrained encoder, for downstream tasks
-# Usage: python3 downstream_ufilt.py path_to_model path_to_MTAT [--train]
+# Usage: python3 downstream_ufilt.py path_to_MTAT path_to_model [--train]
 # the model can be either used directly after pretraining or only evaluated
 # --train, if given, trains the shallow classifier before evaluation
 # if not, evaluates a trained encoder+shallow classifier on the given task
