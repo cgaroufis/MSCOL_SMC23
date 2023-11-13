@@ -50,3 +50,7 @@ model_dir: path where checkpoints of the pretrained model will be saved (at inte
 To train a shallow classifier on top of a pre-trained encoder at a specific downstream task, use the downstream_{dataset}.py scripts. They accept as arguments the directory of the target dataset, the model directory, and whether the shallow classifier will be trained upon the encoder, or just evaluated on the target dataset (argument --train).  
 eg. python3 downstream_nsynth.py /home/data/NSynth models/mymodel --train (to train and evaluate a shallow classifier)  
 or: python3 downstream_nsynth.py /home/data/NSynth models/mymodel_NSynth (to evaluate an already trained shallow classifier)
+
+## Acknowledgements
+
+This research was supported by the Hellenic Foundation for Research and Innovation (H.F.R.I.) under the “3rd Call for H.F.R.I. Research Projects to support Post-Doctoral Researchers” (Project Acronym: i-MRePlay, Project Number: 7773).
